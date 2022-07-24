@@ -1,0 +1,28 @@
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int zero =0 , one = 0, two = 0;
+        for(auto i : nums)  // calculatig the frequency of 0 , 1 ad 2
+        {
+            switch (i)
+            {
+                case 0:
+                    zero++;
+                    break;
+                case 1:
+                    one++;
+                    break;
+                case 2:
+                    two++;
+                    break;
+                    
+            }
+        }
+        
+        nums.clear();  // clearing the vector
+        for(int i= 0; i<zero; i++) nums.push_back(0);  // pushing the zero value
+        for(int i= 0; i<one; i++) nums.push_back(1);  // pushig the 1 value
+        for(int i= 0; i<two; i++) nums.push_back(2);  // pushing the value 2
+        
+    }
+};
